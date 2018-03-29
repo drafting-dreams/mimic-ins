@@ -44,7 +44,7 @@ nav {
 .logoOuter {
   -webkit-box-flex: 1;
   flex: 1 9999 0%;
-  min-width: 40px;
+  min-width: 43px;
 }
 
 .logoContainer {
@@ -86,6 +86,12 @@ a {
   background-position: -331px -430px;
   height: 30px;
   width: 30px;
+}
+
+@media (max-width: 514px) {
+  .searchContainer {
+    display: none
+  }
 }
 
 .searchContainer {
@@ -147,12 +153,21 @@ a {
 }
 
 .searchIcon {
-  margin-right: 6px;
-  vertical-align: baseline;
-
   background-position: -429px -385px;
   height: 10px;
   width: 10px;
+}
+
+.searchIconUnactivatedPosition {
+  margin-right: 6px;
+  vertical-align: baseline;
+}
+
+.searchIconActivatedPosition {
+  left: 11px;
+  position: absolute;
+  top: 9px;
+  z-index: 2;
 }
 
 .searchTextIcon {
@@ -182,4 +197,57 @@ a {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
+}
+
+.threeIconsContents {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding-left: 24px;
+  white-space: nowrap;
+}
+
+.threeIconContainer:not(:first-child) {
+  margin-left: 30px;
+}
+
+.navExplore {
+  background-position: -335px -399px;
+}
+
+.navHeart {
+  background-position: -257px -399px;
+}
+
+.navUser {
+  background-position: -182px -479px;
+}
+
+.hideLinkText {
+  display: block;
+  text-indent: 110%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.searchClear {
+  z-index: 3;
+  right: 5px;
+  top: 4px;
+  position: absolute;
+  background-position: -546px -94px;
+  height: 20px;
+  width: 20px;
+}
+
+.clickBoard {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }

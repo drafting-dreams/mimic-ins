@@ -51,10 +51,6 @@ body, button, input, textarea {
   line-height: 18px;
 }
 
-input:not([type]), input[type=email], input[type=number], input[type=password], input[type=tel], input[type=url], input[type=text] {
-  padding: 1px 0px;
-}
-
 input {
   -webkit-appearance: textfield;
   background-color: white;
@@ -70,4 +66,11 @@ input {
 .bgi {
   background-image: url("../static/img/bunch.png");
   background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+a, a:visited {
+  color: #003569;
+  text-decoration: none;
 }

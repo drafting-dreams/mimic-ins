@@ -10,6 +10,8 @@ class App extends React.Component {
         <div>
           <Header/>
         </div>
+        (/* just to get the page to scroll */)
+        <div style={{'height': '2000px'}}/>
       </div>
     );
   }
