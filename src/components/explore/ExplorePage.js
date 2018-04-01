@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-class HomePage extends React.Component {
+class ExplorePage extends React.Component {
     constructor(props, context) {
         super(props, context);
     }
@@ -11,14 +11,14 @@ class HomePage extends React.Component {
     render() {
         return (
           <div>
-            <h1>HomePage</h1>
+            <h1>Explore</h1>
           </div>
         );
     }
 
 }
 
-HomePage.propTypes = {};
+ExplorePage.propTypes = {};
 
 // function mapStateToProps(state, ownProps) {
 //     return {
@@ -32,6 +32,6 @@ HomePage.propTypes = {};
 //     };
 // }
 //
-// export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+// export default connect(mapStateToProps, mapDispatchToProps)(ExplorePage);
 
-export default HomePage;
+export default ExplorePage;
