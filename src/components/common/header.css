@@ -24,6 +24,10 @@ nav {
   align-items: center;
 }
 
+.navContainerShrunk {
+  height: 52px;
+}
+
 .navContents {
   display: flex;
   -webkit-box-direction: normal;
@@ -39,6 +43,13 @@ nav {
   -webkit-transition: height .2s ease-in-out;
   transition: height .2s ease-in-out;
   width: 100%;
+  align-items: center;
+  -webkit-box-align: center;
+}
+
+.navContentsShrunk {
+  height: 52px;
+  padding:0 40px;
 }
 
 .logoOuter {
@@ -60,11 +71,22 @@ a {
   text-decoration: none;
 }
 
+
 .insLogoStyle {
   display: block;
   overflow: hidden;
   text-indent: 110%;
   white-space: nowrap;
+}
+
+@media (max-width: 770px) {
+  .insLogoStyle.insLogoStyle {
+    transform-origin: left;
+    -webkit-transform-origin: left;
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    text-indent: 200%;
+  }
 }
 
 .insLogoBg {
@@ -76,6 +98,12 @@ a {
   -webkit-transion: opacity .2s ease-in-out;
 }
 
+.navContentsShrunk .insLogoBg {
+  pointer-events: none;
+  opacity: 0;
+}
+
+
 .smallLogoBtn {
   top: 4px;
   position: absolute;
@@ -86,6 +114,11 @@ a {
   background-position: -331px -430px;
   height: 30px;
   width: 30px;
+}
+
+.navContentsShrunk .smallLogoBtn {
+  pointer-events: all;
+  opacity: 1;
 }
 
 @media (max-width: 514px) {

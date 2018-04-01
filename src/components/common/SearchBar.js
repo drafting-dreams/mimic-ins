@@ -40,7 +40,6 @@ class SearchBar extends React.Component {
     this.setState({
       inputActivated: false
     });
-    console.log('losefocus')
   }
 
   clearInput() {
@@ -49,7 +48,6 @@ class SearchBar extends React.Component {
       inputValue: "",
       inputActivated: false
     });
-    console.log('clear')
   }
 
   render() {
