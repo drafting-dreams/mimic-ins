@@ -20,6 +20,11 @@ class Header extends React.Component {
     this.scrollHandler = this.scrollHandler.bind(this);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if(nextState.shrink === this.state.shrink) {return false;}
+    return true;
+  }
+
   componentDidMount() {
     window.addEventListener('scroll', this.scrollHandler);
   }
@@ -51,7 +56,7 @@ class Header extends React.Component {
     const navContainerShrunk = shrink ? "navContainer navContainerShrunk" : "navContainer";
     const navContentsShrunk = shrink ? "navContents navContentsShrunk" : "navContents";
     return(
-      <div>
+      <nav>
         <div className="pillar"></div>
         <div className="empty">
           <div className={navContainerShrunk}>
@@ -75,7 +80,7 @@ class Header extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </nav>
     );
   }
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import Art from './ArtContainer';
+import './home.css';
 
 class HomePage extends React.Component {
     constructor(props, context) {
@@ -10,9 +12,20 @@ class HomePage extends React.Component {
 
     render() {
         return (
-          <div>
-            <h1>HomePage</h1>
-          </div>
+
+            <main role="main">
+              <section className="mainSection">
+                <div>
+                  <div>
+                  <div style={{flexDirection: "column"}}>
+                    (/*There should be a list of articles*/)
+                    <Art/>
+                  </div>
+                  </div>
+                </div>
+              </section>
+            </main>
+
         );
     }
 

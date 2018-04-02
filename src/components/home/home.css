@@ -1,0 +1,237 @@
+.homeArticle {
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .homeArticle {
+    margin-bottom: 60px;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    margin-left: -1px;
+    margin-right: -1px;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 735px) {
+  .homeArticle {
+    margin-bottom: 15px;
+  }
+}
+
+.artHeader {
+  height: 60px;
+  padding: 16px;
+  align-items: center;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+  border-bottom: 1px solid #efefef;
+}
+
+.avatarContainer {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.avatarCanvas {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.avatarLink {
+  cursor: pointer;
+  background-color: #fafafa;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatarLink::after {
+  border: 1px solid rgba(0,0,0,.0975);
+  border-radius: 50%;
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.avatarSize {
+  width: 100%;
+  height: 100%;
+}
+
+.nameContainer {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin-left: 12px;
+  overflow: hidden;
+}
+
+.name {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  max-width: 100%;
+  overflow: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.nameLink {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nameLinkStyle, .nameLinkStyle:visited {
+  color: #262626;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.artImgOuter {
+  background-color: #efefef;
+  display: block;
+  width: 100%;
+}
+
+.artImgContainer {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+
+.image {
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.doubleClickHeartContainer {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.doubleClickHeart {
+  background-position: -300px -114px;
+  height: 81px;
+  width: 92px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.heartAnimation {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: like-heart-animation;
+  animation-name: like-heart-animation;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 0.8;
+}
+
+@keyframes like-heart-animation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  15% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+
+  30% {
+    transform: scale(1.2);
+  }
+
+  34% {
+    transform: scale(1.23);
+  }
+
+  90% {
+    transform: scale(1.23);
+    opacity: 0.8;
+  }
+
+
+  100% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+}
+
+.articleClipBoard {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
