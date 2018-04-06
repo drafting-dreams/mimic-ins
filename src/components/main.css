@@ -63,6 +63,10 @@ input {
   border-image: initial;
 }
 
+ol, ul {
+  list-style: none;
+}
+
 .bgi {
   background-image: url("../static/img/bunch.png");
   background-repeat: no-repeat;
@@ -105,3 +109,123 @@ main {
     margin-bottom: 10px;
   }
 }
+
+.textOverflowHidden {
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+}
+
+.likeLink {
+  margin-left: -8px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.likeBgiPosition {
+  background-position: -364px -479px;
+}
+
+.activeLikeBgiPosition {
+  background-position: -520px -479px;
+}
+
+.activeOpacityChange:active {
+  opacity: .5;
+}
+
+.commentLink {
+  padding: 8px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.commentBgiPosition {
+  background-position: -157px -479px;
+}
+
+.collectLink {
+  padding: 8px;
+  margin-right: -8px;
+  cursor: pointer;
+  background: transparent;
+  margin-left: auto;
+}
+
+.timeContainer {
+  margin-bottom: 4px;
+}
+
+.collectBgiPosition {
+  background-position: -2px -505px;
+}
+
+.activeCollectBgiPosition {
+  background-position: -262px -479px;
+}
+
+.commentItem {
+  overflow: hidden;
+  padding-bottom: 6px;
+  position: relative;
+  word-wrap: break-word;
+  margin-top: -5px;
+  padding-top: 5px;
+}
+
+.commentItemName {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 5px;
+  margin-left: -5px;
+  margin-right: .3em;
+}
+
+.linkColor, .linkColor:visited {
+  color: #262626;
+}
+
+.commentAreaContainer {
+  border-top: 1px solid #efefef;
+  color: #999;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 18px;
+  min-height: 56px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.commentForm {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.addComment {
+  display: flex;
+  flex-grow: 1;
+  background: 0 0;
+  border: 0;
+  color: #262626;
+  font-size: inherit;
+  height: 18px;
+  max-height: 80px;
+  outline: 0;
+  padding: 0;
+  resize: none;
+}
+
+

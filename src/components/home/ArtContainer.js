@@ -1,10 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+//import PropTypes from 'prop-types';
+//import {bindActionCreators} from 'redux';
+//import {connect} from 'react-redux';
 
 import Header from './ArtHeader';
 import Image from './ArtImage';
+import Comments from './Comments';
 
 class ArtContainer extends React.Component {
   constructor(props, context) {
@@ -16,14 +17,19 @@ class ArtContainer extends React.Component {
     this.disableAnimation = this.disableAnimation.bind(this);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if(nextState.animation === this.state.animation) {return false;}
+    return true;
+  }
+
   disableAnimation() {
     this.setState({animation: false});
   }
 
-  enableAnimation() {
+  enableAnimation(e) {
+    e.preventDefault();
     this.setState({animation: true});
     setTimeout(this.disableAnimation, 1000);
-    console.log(this.state.animation)
   }
 
   render() {
@@ -32,7 +38,7 @@ class ArtContainer extends React.Component {
       <article className="homeArticle">
         <Header/>
         <Image doubleClickHandler={this.enableAnimation} bigHeartClassName={className}/>
-        <div></div>
+        <Comments/>
         <div></div>
       </article>
     );

@@ -63,8 +63,8 @@ class Header extends React.Component {
             <div className={navContentsShrunk}>
               <div className="logoOuter">
                 <div className="logoContainer">
-                  <NavLink exact to="/" className="insLogoStyle bgi insLogoBg changeIndent">Instagram</NavLink>
-                  <NavLink exact to="/" className="insLogoStyle bgi smallLogoBtn changeIndent">Instagram</NavLink>
+                  <NavLink exact to="/" className="textOverflowHidden insLogoStyle bgi insLogoBg changeIndent">Instagram</NavLink>
+                  <NavLink exact to="/" className="textOverflowHidden insLogoStyle bgi smallLogoBtn changeIndent">Instagram</NavLink>
                 </div>
               </div>
               <SearchBar/>

@@ -1,13 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+//import PropTypes from 'prop-types';
+//import {bindActionCreators} from 'redux';
+//import {connect} from 'react-redux';
 import Art from './ArtContainer';
 import './home.css';
 
 class HomePage extends React.Component {
     constructor(props, context) {
         super(props, context);
+    }
+
+    shouldComponentUpdate() {
+      return false;
     }
 
     render() {
@@ -18,7 +22,6 @@ class HomePage extends React.Component {
                 <div>
                   <div>
                   <div style={{flexDirection: "column"}}>
-                    (/*There should be a list of articles*/)
                     <Art/>
                   </div>
                   </div>

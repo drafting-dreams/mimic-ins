@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const BigHeart = (props) => {
   const className = props.className;
-  console.log(className);
   //"bgi doubleClickHeart heartAnimation"
   return (
     <div className="doubleClickHeartContainer">
@@ -13,7 +12,7 @@ const BigHeart = (props) => {
 
 }
 
-BigHeart.prototype = {
+BigHeart.propTypes = {
   className: PropTypes.string.isRequired
 }
 

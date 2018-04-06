@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+//import PropTypes from 'prop-types';
+//import {bindActionCreators} from 'redux';
+//import {connect} from 'react-redux';
 
 class ExplorePage extends React.Component {
     constructor(props, context) {

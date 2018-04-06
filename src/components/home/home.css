@@ -235,3 +235,65 @@
   right: 0;
   position: absolute;
 }
+
+.commentsContainer {
+  padding: 0 16px;
+}
+
+.commentLogosContainer {
+  margin-top: 4px;
+  flex-direction: row;
+}
+
+.likeNumber {
+  margin-bottom: 8px;
+}
+
+.likeNumberContents {
+  flex-shrink: 1;
+  flex-grow: 1;
+  color: #262626;
+}
+
+.likeNumberLink, .likeNumberLink:visited{
+  font-weight: 600;
+  color: #262626;
+}
+
+.commentContainer {
+  margin-top: -5px;
+  margin-bottom: 4px;
+  padding-top: 5px;
+  min-height: 0;
+  overflow: auto;
+  flex-shrink: 1;
+  flex-grow: 1;
+  overflow-anchor: none;
+}
+
+.commentLists {
+  flex-grow: 1;
+}
+
+.timeLink {
+  color: #999;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.timeFont {
+  font-size: 10px;
+  letter-spacing: .2px;
+  color: #666;
+}
+
+@media (max-width: 735px) {
+  .lineHeightChange {
+    line-height: 17px;
+  }
+}
+
+.commentAreaContainerOuter {
+  padding-right: 26px;
+  margin-top: 4px;
+}

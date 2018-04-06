@@ -72,12 +72,6 @@ a {
 }
 
 
-.insLogoStyle {
-  display: block;
-  overflow: hidden;
-  text-indent: 110%;
-  white-space: nowrap;
-}
 
 @media (max-width: 770px) {
   .insLogoStyle.insLogoStyle {
