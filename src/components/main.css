@@ -10,7 +10,7 @@ strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, 
   vertical-align: baseline;
 }
 
-h1,div, footer, header, nav, section, main{
+article, h1,div, footer, header, nav, section, main{
   align-items: stretch;
   -webkit-box-align: stretch;
   -webkit-box-direction: normal;
@@ -228,4 +228,22 @@ main {
   resize: none;
 }
 
+.optionContainer {
+  position: absolute;
+  justify-content: center;
+  height: 60px;
+  -webkit-box-pack: center;
+}
 
+.optionButton {
+  background-color: transparent;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.optionPosition {
+  background-position: -545px -335px;
+  height: 16px;
+  width: 16px;
+}

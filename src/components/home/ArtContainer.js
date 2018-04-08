@@ -11,7 +11,8 @@ class ArtContainer extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      animation: false
+      animation: false,
+      like: false
     }
     this.enableAnimation = this.enableAnimation.bind(this);
     this.disableAnimation = this.disableAnimation.bind(this);
@@ -28,7 +29,7 @@ class ArtContainer extends React.Component {
 
   enableAnimation(e) {
     e.preventDefault();
-    this.setState({animation: true});
+    this.setState({animation: true, like: true});
     setTimeout(this.disableAnimation, 1000);
   }
 
@@ -38,8 +39,12 @@ class ArtContainer extends React.Component {
       <article className="homeArticle">
         <Header/>
         <Image doubleClickHandler={this.enableAnimation} bigHeartClassName={className}/>
-        <Comments/>
-        <div></div>
+        <Comments like={this.state.like}/>
+        <div className="optionContainer mediaOption">
+          <button className="optionButton">
+            <span className="bgi optionPosition textOverflowHidden">更多选项</span>
+          </button>
+        </div>
       </article>
     );
   }

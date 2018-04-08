@@ -2,6 +2,13 @@
   padding: 0;
 }
 
+
+@media (max-width: 735px) {
+  .homeArticle {
+    margin-bottom: 15px;
+  }
+}
+
 @media (min-width: 640px) {
   .homeArticle {
     margin-bottom: 60px;
@@ -10,12 +17,6 @@
     margin-left: -1px;
     margin-right: -1px;
     background-color: #fff;
-  }
-}
-
-@media (max-width: 735px) {
-  .homeArticle {
-    margin-bottom: 15px;
   }
 }
 
@@ -287,13 +288,26 @@
   color: #666;
 }
 
-@media (max-width: 735px) {
-  .lineHeightChange {
-    line-height: 17px;
-  }
-}
 
 .commentAreaContainerOuter {
   padding-right: 26px;
   margin-top: 4px;
+}
+
+.mediaOption {
+  bottom: 0;
+  height: 52px;
+  right: 10px;
+  top: auto;
+}
+
+@media (max-width: 735px) {
+  .lineHeightChange {
+    line-height: 17px;
+  }
+
+  .mediaOption {
+    right: 10px;
+    top: 0;
+  }
 }
