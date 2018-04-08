@@ -22,6 +22,7 @@ class BlogItem extends React.Component {
   }
 
   render() {
+    console.log(this.state.more);
     const blogger = this.state.blogger;
     return (
       <li className="commentItem">

@@ -91,10 +91,7 @@ class Comments extends React.Component {
     const likeText = this.state.like ? "取消赞" : "赞";
     const collected = this.state.collected ? " activeCollectBgiPosition" : " collectBgiPosition";
     const collectedText = this.state.collected ? "移除" : "收藏";
-    const comments = [{user: "madilynbailey", comm: "想看更多？\n骗你的，没了！"},
-      {user: "technical", comm: "My dad told me..."},
-      {user: "luka", comm: "he's not your dad"},
-      {user: "likalo", comm: "hahaha"}];
+    const comments = this.props.comments.slice();
 
     return (
       <div className="commentsContainer">
@@ -156,7 +153,8 @@ class Comments extends React.Component {
 }
 
 Comments.propTypes = {
-  like: PropTypes.bool
+  like: PropTypes.bool,
+  comments: PropTypes.array
 }
 
 export default Comments;

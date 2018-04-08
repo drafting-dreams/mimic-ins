@@ -1,8 +1,9 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-//import {bindActionCreators} from 'redux';
-//import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import Art from './ArtContainer';
+import * as artActions from '../../actions/artActions';
 import './home.css';
 
 class HomePage extends React.Component {
@@ -10,19 +11,16 @@ class HomePage extends React.Component {
         super(props, context);
     }
 
-    shouldComponentUpdate() {
-      return false;
-    }
 
     render() {
+      const arts = this.props.arts;
         return (
-
             <main role="main">
               <section className="mainSection">
                 <div>
                   <div>
                   <div style={{flexDirection: "column"}}>
-                    <Art/>
+                    {arts.map(art => {return<Art key={art.id} art={art}/>})}
                   </div>
                   </div>
                 </div>
@@ -34,20 +32,20 @@ class HomePage extends React.Component {
 
 }
 
-HomePage.propTypes = {};
+HomePage.propTypes = {
+  arts: PropTypes.array
+};
 
-// function mapStateToProps(state, ownProps) {
-//     return {
-//         state: state
-//     };
-// }
-//
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         actions: bindActionCreators(actions, dispatch)
-//     };
-// }
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+function mapStateToProps(state) {
+    return {
+        arts: state.arts
+    };
+}
 
-export default HomePage;
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(artActions, dispatch)
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

@@ -1,5 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 //import {bindActionCreators} from 'redux';
 //import {connect} from 'react-redux';
 
@@ -18,10 +18,6 @@ class ArtContainer extends React.Component {
     this.disableAnimation = this.disableAnimation.bind(this);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if(nextState.animation === this.state.animation) {return false;}
-    return true;
-  }
 
   disableAnimation() {
     this.setState({animation: false});
@@ -37,9 +33,12 @@ class ArtContainer extends React.Component {
     const className = this.state.animation ? "bgi doubleClickHeart heartAnimation" : "bgi doubleClickHeart";
     return (
       <article className="homeArticle">
-        <Header/>
-        <Image doubleClickHandler={this.enableAnimation} bigHeartClassName={className}/>
-        <Comments like={this.state.like}/>
+        <Header avatar={this.props.art.userAvatar} name={this.props.art.userName}/>
+        <Image doubleClickHandler={this.enableAnimation}
+               bigHeartClassName={className}
+               aspectRatio={this.props.art.aspectRatio}
+               src={this.props.art.src}/>
+        <Comments like={this.state.like} comments={this.props.art.comments}/>
         <div className="optionContainer mediaOption">
           <button className="optionButton">
             <span className="bgi optionPosition textOverflowHidden">更多选项</span>
@@ -51,7 +50,9 @@ class ArtContainer extends React.Component {
 
 }
 
-ArtContainer.propTypes = {};
+ArtContainer.propTypes = {
+  art: PropTypes.object.isRequired
+};
 
 // function mapStateToProps(state, ownProps) {
 //     return {

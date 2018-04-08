@@ -4,15 +4,18 @@ import Item from './CommentListItem';
 import Blog from './BlogItem';
 
 const CommentList = (props) => {
-  let comments = props.comments;
+  let comments = props.comments.slice();
   let blogger = {};
   if (comments.length > 0) {
-    blogger = comments[0];
+    blogger = Object.assign({}, comments[0]);
     const multipleLine = blogger.comm.split('\n');
     blogger.comm = multipleLine[0];
     blogger.commMore = multipleLine.slice(1);
+    console.log(blogger.commMore);
   }
+  console.log(comments);
   comments = comments.slice(1);
+  console.log(comments);
   return (
     <ul className="commentLists">
       <Blog blogger={blogger}/>
